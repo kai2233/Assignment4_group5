@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Button</title>
+    <style>
+        .argument {
+            display: inline-block;
+            margin: 100px;
+            padding: 50px;
+        }
+
+        
+
+        .button:hover {
+            background-color: green;
+        }
+
+        body {
+            background-image: url(https://images.pexels.com/photos/82256/pexels-photo-82256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        }
+
+        #button1,
+        #button2 {
+            height: 100px;
+            width: 200px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="argument">
+        <button id="button1" onclick="func1()">Button 1</button>
+        <span id="text1"></span>
+    </div>
+
+    <div class="argument">
+        <button id="button2" onclick="func2()">Button 2</button>
+        <span id="text2"></span>
+    </div>
+
+    <script>
+        const button1 = document.getElementById("button1");
+        const button2 = document.getElementById("button2");
+        const text1 = document.getElementById("text1");
+        const text2 = document.getElementById("text2");
+
+        function func1() {
+            text1.textContent = "I'm right";
+            text2.textContent = "";
+        }
+
+        function func2() {
+            text1.textContent = "";
+            text2.textContent = "No, I'm right!";
+        }
+
+
+    </script>
+</body>
+
+</html>
